@@ -7,10 +7,10 @@ import java.util.Date;
 
 @Entity
 @Table
-@NoArgsConstructor
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Publication {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", updatable = false, nullable = false)
     protected Long id;
 
