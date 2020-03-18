@@ -5,9 +5,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+
 @Table
 @NoArgsConstructor
+@MappedSuperclass
 public abstract class Publication {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
