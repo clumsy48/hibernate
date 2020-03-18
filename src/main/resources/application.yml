@@ -1,0 +1,12 @@
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: seth
+    password: rick
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
