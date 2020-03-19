@@ -1,13 +1,8 @@
 package hibernate_inheritance.entity;
 
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.util.Date;
 
-
-@Table
-@NoArgsConstructor
 @MappedSuperclass
 public abstract class Publication {
     @Id
