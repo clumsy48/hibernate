@@ -5,9 +5,9 @@ import lombok.Setter;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-@Entity(name = "Book")
-@DiscriminatorValue("Book")
+@Entity(name = "BlogPost")
+@DiscriminatorValue("BlogPost")
 @Setter
-public class Book extends Publication {
-    private int pages;
+public class BlogPost extends Publication{
+    private String url;
 }

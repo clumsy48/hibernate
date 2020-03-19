@@ -1,13 +1,13 @@
 package hibernate_inheritance.entity;
 
-import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table
-@NoArgsConstructor
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "Publication_Type")
 public abstract class Publication {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +24,16 @@ public abstract class Publication {
     @Column
     @Temporal(TemporalType.DATE)
     private Date publishingDate;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
+    }
+
+    public void setPublishingDate(Date publishingDate) {
+        this.publishingDate = publishingDate;
+    }
 }
