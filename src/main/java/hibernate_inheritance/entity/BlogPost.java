@@ -6,6 +6,6 @@ import javax.persistence.Entity;
 
 @Entity
 @Setter
-public class Book extends Publication {
-    private int pages;
+public class BlogPost extends Publication {
+    private String url;
 }
